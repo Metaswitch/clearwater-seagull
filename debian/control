@@ -11,4 +11,5 @@ Homepage: http://projectclearwater.org/
 
 Package: clearwater-seagull
 Architecture: all
+Depends: ksh bash
 Description: Seagull configured for Clearwater

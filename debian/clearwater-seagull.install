@@ -1,1 +1,2 @@
-seagull/trunk/src/bin/* /usr/bin/
+seagull/trunk/src/bin/* /usr/share/clearwater/bin/
+seagull/trunk/src/exe-env/* /usr/share/clearwater/exe-env/
