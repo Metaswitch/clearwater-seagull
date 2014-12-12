@@ -25,6 +25,7 @@
     <!-- Types defined for the AVP   -->
     <typedef name="Integer32" type="signed" size="4" unit="octet"></typedef>
     <typedef name="Unsigned32" type="number" size="4" unit="octet"></typedef>
+    <typedef name="Enumerated" type="signed" size="4" unit="octet"> </typedef>
     <typedef name="Integer64" type="signed64" size="8" unit="octet"></typedef>
     <typedef name="Unsigned64" type="number64" size="8" unit="octet"></typedef>
     <typedef name="OctetString" type="string" size="4" unit="octet"></typedef>
@@ -74,7 +75,7 @@
         <setfield name="avp-code" value="485"></setfield>
         <setfield name="flags" value="64"></setfield>
       </define>
-      <define name="Accounting-Record-Type" type="OctetString">
+      <define name="Accounting-Record-Type" type="Enumerated">
         <setfield name="avp-code" value="480"></setfield>
         <setfield name="flags" value="64"></setfield>
       </define>
@@ -300,6 +301,20 @@
         <setfield name="application-id" value="3"></setfield>
         <setfield name="protocol-version" value="1"></setfield>
       </define>
+
+      <define name="DWR">
+        <!-- It's a request, R bit is set -->
+        <setfield name="flags" value="128"></setfield>
+        <setfield name="cmd-code" value="280"></setfield>
+        <setfield name="protocol-version" value="1"></setfield>
+      </define>
+      <define name="DWA">
+        <!-- It's an answer, R bit is unset -->
+        <setfield name="flags" value="0"></setfield>
+        <setfield name="cmd-code" value="280"></setfield>
+        <setfield name="protocol-version" value="1"></setfield>
+      </define>
+
     </command>
 
   </dictionary>
