@@ -818,7 +818,7 @@ int C_ScenarioControl::add_command (T_cmd_type                P_cmd_type,
       L_channel_id = m_channel_ctrl->get_channel_id(L_value);
       if (L_channel_id  == ERROR_CHANNEL_UNKNOWN) {
 	GEN_ERROR(E_GEN_FATAL_ERROR, 
-		  "Chanel [" << L_value << "] unknowm for the send command");
+		  "Channel [" << L_value << "] unknown for the send command");
 	L_ret = -1 ;
 	break ;
       }
