@@ -34,12 +34,14 @@
 # as those licenses appear in the file LICENSE-OPENSSL.
 
 scenarioFile=$1
-
+count=1
 . /etc/clearwater/config
 ipv4prefix='0x0001'
 hex_address=$(printf '%02X' ${local_ip//./ })
 sed -e "s/SEAGULL_LOCAL_IP_AS_HEX/$ipv4prefix$hex_address/g" \
     -e "s/SCSCF_URI/sip:$sprout_hostname:5054/g" \
     -e "s/HOME_DOMAIN/$home_domain/g" \
-    -e "s/PUBLIC_HOSTNAME/$public_hostname/g" -i $scenarioFile
-sed -e 's/SEAGULL_LOCAL_IP/'$local_ip'/g' -i /usr/share/clearwater/exe-env/diameter-env/config/conf.server.xml
+    -e "s/PUBLIC_HOSTNAME/$public_hostname/g" \
+    -e "s/SEAGULL_LOCAL_IP/$local_ip/g" \
+    -e "s/SEAGULL_COUNT/$count/g" -i $scenarioFile
+sed -e "s/SEAGULL_LOCAL_IP/$local_ip/g" -i /usr/share/clearwater/exe-env/diameter-env/config/conf.server.xml

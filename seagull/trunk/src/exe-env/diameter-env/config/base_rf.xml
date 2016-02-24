@@ -263,9 +263,30 @@
         <setfield name="avp-code" value="11"></setfield>
         <setfield name="flags" value="64"></setfield>
       </define>
-	<define name="Service-Information" type="Grouped">
+      <define name="Service-Information" type="Grouped">
+        <setfield name="Vendor-ID" value="10415"></setfield>
         <setfield name="avp-code" value="873"></setfield>
-        <setfield name="flags" value="64"></setfield>
+        <setfield name="flags" value="192"></setfield>
+      </define>
+      <define name="IMS-Information" type="Grouped">
+        <setfield name="Vendor-ID" value="10415"></setfield>
+        <setfield name="avp-code" value="876"></setfield>
+        <setfield name="flags" value="192"></setfield>
+      </define>
+      <define name="Role-Of-Node" type="Enumerated">
+        <setfield name="Vendor-ID" value="10415"></setfield>
+        <setfield name="avp-code" value="829"></setfield>
+        <setfield name="flags" value="192"></setfield>
+      </define>
+      <define name="Node-Functionality" type="Enumerated">
+        <setfield name="Vendor-ID" value="10415"></setfield>
+        <setfield name="avp-code" value="862"></setfield>
+        <setfield name="flags" value="192"></setfield>
+      </define>
+      <define name="IMS-Charging-Identifier" type="OctetString">
+        <setfield name="Vendor-ID" value="10415"></setfield>
+        <setfield name="avp-code" value="841"></setfield>
+        <setfield name="flags" value="192"></setfield>
       </define>
 	</avp>
       <!-- Diameter Rf (3GPP TS 29.329 V7.1.0) AVPs -->
